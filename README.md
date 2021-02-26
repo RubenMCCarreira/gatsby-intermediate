@@ -46,7 +46,7 @@ git checkout start
 - Create pages from the docs nodes (`createPages`)
   - Write a GraphQL query in GraphiQL first
 - Add Theme UI
-  - `yarn workspace gatsby-theme-docs add theme-ui gatsby-plugin-theme-ui @emotion/core @mdx-js/react`
+  - `yarn workspace gatsby-theme-docs add theme-ui gatsby-plugin-theme-ui @emotion/react @mdx-js/react`
   - Update `gatsby-config.js`
   - Add a theme file (`src/gatsby-plugin-theme-ui/index.js`)
   - Update `Layout` to use Theme UI
@@ -78,7 +78,7 @@ git checkout start
 ## Part III: Build a Negroni Fan Site
 
 - Add Theme UI
-  - `yarn workspace negronis add theme-ui gatsby-plugin-theme-ui @emotion/core @mdx-js/react`
+  - `yarn workspace negronis add theme-ui gatsby-plugin-theme-ui @emotion/react @mdx-js/react`
   - Add a preset (`yarn workspace negronis add @theme-ui/presets`)
   - Create a theme file (`src/gatsby-plugin-theme-ui/index.js`)
 - Create a `Layout` component (`src/components/layout.js`)
