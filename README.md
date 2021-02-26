@@ -55,13 +55,13 @@ git checkout start
   - Write a `useDocs` hook (`src/hooks/use-docs.js`)
 - Add support for syntax highlighted code
   - `yarn workspace gatsby-theme-docs add mdx-utils prism-react-renderer`
-  - Create a `Code` component (`src/components/code.js`)
-  - Shadow the MDX components in Theme UI to use `Code` (`src/gatsby-plugin-theme-ui/components.js`)
+  - Create a `CodePreview` component (`src/components/code-preview.js`)
+  - Shadow the MDX components in Theme UI to use `CodePreview` (`src/gatsby-plugin-theme-ui/components.js`)
   - Insert a fenced code block (use `src/components/docs-page.js`) into `docs/index.mdx`
 - Add support for live editing code blocks
   - `yarn workspace gatsby-theme-docs add react-live`
   - Add a scope file for easy shadowing
-  - Update `Code` to use `react-live`
+  - Update `CodePreview` to use `reactLive`
 
 ## Part II: Honkify
 

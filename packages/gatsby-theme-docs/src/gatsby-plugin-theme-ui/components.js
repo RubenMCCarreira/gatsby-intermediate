@@ -1,5 +1,5 @@
-import Code from '../components/code';
+import CodePreview from '../components/code-preview';
 
 export default {
-  pre: Code,
+  pre: CodePreview,
 };

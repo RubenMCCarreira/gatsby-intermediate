@@ -9,6 +9,7 @@ module.exports = {
         },
       },
     },
+    'gatsby-plugin-theme-ui',
     {
       resolve: 'gatsby-theme-docs',
       options: {
@@ -16,6 +17,5 @@ module.exports = {
         useExternalMDX: true,
       },
     },
-    'gatsby-plugin-theme-ui',
   ],
 };
