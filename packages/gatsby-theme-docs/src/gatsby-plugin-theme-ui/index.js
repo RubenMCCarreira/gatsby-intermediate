@@ -1,6 +1,6 @@
 export default {
   colors: {
-    primary: 'rebeccapurple',
+    primary: 'green',
     secondary: 'indigo',
     muted: 'grey',
     text: 'purple',
@@ -9,5 +9,11 @@ export default {
   fonts: {
     header: 'arial',
     main: 'fantasy'
-  }
+  },
+  fontStyle: {
+    contentPage: 'italic'
+  },
+  textDecoration: {
+    contentPage: 'none'
+  },
 };

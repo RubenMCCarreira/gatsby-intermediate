@@ -6,16 +6,16 @@ import theme from 'prism-react-renderer/themes/nightOwl';
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live';
 import scope from '../scope';
 
-const Code = props => {
+const CodePreview = props => {
   const codeProps = preToCodeBlock(props);
 
   if (!codeProps) {
     return <pre {...props} />;
   }
 
-  const { codeString, language } = codeProps;
+  const { codeString, language, reactLive } = codeProps;
 
-  return codeProps['react-live'] ? (
+  return reactLive ? (
     <LiveProvider code={codeString} scope={scope} theme={theme}>
       <LiveEditor />
       <LiveError />
@@ -43,10 +43,10 @@ const Code = props => {
           style={style}
           sx={{ p: 2, overflowX: 'scroll', variant: 'prism-highlight' }}
         >
-          {tokens.map((line, i) => (
-            <div {...getLineProps({ line, key: i })}>
-              {line.map((token, key) => (
-                <span {...getTokenProps({ token, key })} />
+          {tokens.map((line, indexToken) => (
+            <div {...getLineProps({ line, key: indexToken })}>
+              {line.map((token, indexLine) => (
+                <span {...getTokenProps({ token, key: indexLine })} />
               ))}
             </div>
           ))}
@@ -56,4 +56,4 @@ const Code = props => {
   );
 };
 
-export default Code;
+export default CodePreview;
