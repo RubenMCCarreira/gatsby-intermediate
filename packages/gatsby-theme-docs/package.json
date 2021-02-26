@@ -2,5 +2,11 @@
   "name": "gatsby-theme-docs",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@mdx-js/mdx": "^1.6.22",
+    "@mdx-js/react": "^1.6.22",
+    "gatsby-plugin-mdx": "^1.10.1",
+    "gatsby-source-filesystem": "^2.11.1"
+  }
 }

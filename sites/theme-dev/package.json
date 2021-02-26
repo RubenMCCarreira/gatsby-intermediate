@@ -5,7 +5,8 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "develop": "gatsby develop"
+    "develop": "gatsby develop",
+    "clean": "gatsby clean"
   },
   "dependencies": {
     "gatsby": "^2.32.8",
