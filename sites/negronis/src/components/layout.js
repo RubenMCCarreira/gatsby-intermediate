@@ -7,16 +7,15 @@ import { Link } from 'gatsby';
 const Layout = ({ children }) => (
   <Fragment>
     <Global
-      styles={theme => ({
+      styles={{
         '*': {
           boxSizing: 'border-box',
         },
         body: {
-          fontFamily: theme.fonts.body,
           fontSize: 20,
           margin: 0,
         },
-      })}
+      }}
     />
     <header sx={{ bg: 'primary', color: 'background', p: 3 }}>
       <Link
