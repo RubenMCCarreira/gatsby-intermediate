@@ -22,7 +22,7 @@ const Search = ({ location }) => {
         search interface!
       </p>
       <Form />
-      {name && <Results name={name} />}
+      {!!name && <Results name={name} />}
     </>
   );
 };

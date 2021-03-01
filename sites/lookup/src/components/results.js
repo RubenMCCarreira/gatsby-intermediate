@@ -23,42 +23,44 @@ const Results = ({ name }) => {
     variables: { name },
   });
 
-  const hasResults = data && (data.characters.results || []).length > 0;
+  const hasResults = !!data && !!(data.characters.results || []).length;
 
   return (
     <div style={{ maxWidth: 500, margin: '50px auto' }}>
       <h2>Search Results</h2>
-      {loading && <p>Loading results...</p>}
-      {error && (
+      {!!loading && <p>Loading results...</p>}
+      {!!error && (
         <pre style={{ overflowX: 'scroll' }}>
           {JSON.stringify(error, null, 2)}
         </pre>
       )}
-      {hasResults
-        ? data.characters.results.map(character => (
-            <div
-              key={character.id}
-              style={{ display: 'flex', marginBottom: 40 }}
-            >
-              <div style={{ marginRight: 20, width: 100 }}>
-                <img
-                  src={character.image}
-                  alt={character.name}
-                  style={{ width: '100%' }}
-                />
-              </div>
-              <div>
-                <h3 style={{ fontSize: 20, marginTop: 0 }}>{character.name}</h3>
-                <p>
-                  <strong>Species:</strong> {character.species}
-                </p>
-                <p>
-                  <strong>Origin:</strong> {character.origin.name}
-                </p>
-              </div>
+      {hasResults ? (
+        data.characters.results.map(character => (
+          <div
+            key={character.id}
+            style={{ display: 'flex', marginBottom: 40 }}
+          >
+            <div style={{ marginRight: 20, width: 100 }}>
+              <img
+                src={character.image}
+                alt={character.name}
+                style={{ width: '100%' }}
+              />
             </div>
-          ))
-        : !loading && <p>No characters found matching “{name}”.</p>}
+            <div>
+              <h3 style={{ fontSize: 20, marginTop: 0 }}>{character.name}</h3>
+              <p>
+                <strong>Species:</strong> {character.species}
+              </p>
+              <p>
+                <strong>Origin:</strong> {character.origin.name}
+              </p>
+            </div>
+          </div>
+        ))
+      ) : (
+        !loading && <p>No characters found matching “{name}”.</p>
+      )}
     </div>
   );
 };

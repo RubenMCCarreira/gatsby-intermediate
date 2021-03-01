@@ -2,11 +2,14 @@ import React, { useState } from 'react';
 import { navigate } from 'gatsby';
 
 const Form = () => {
-  const [value, setValue] = useState('');
+  const [value, setValue] = useState();
 
-  const handleInput = event => setValue(event.target.value);
-  const handleSubmit = event => {
-    event.preventDefault();
+  const handleInput = e => {
+    setValue(e.target.value);
+  }
+
+  const handleSubmit = e => {
+    e.preventDefault();
 
     const query = value
       .toLowerCase()
@@ -21,7 +24,7 @@ const Form = () => {
     <form onSubmit={handleSubmit}>
       <label>
         Search by name:
-        <input type="text" name="name" value={value} onChange={handleInput} />
+        <input type="text" name="name" value={value || ''} onChange={handleInput} />
       </label>
       <button type="submit">Search</button>
     </form>
