@@ -4,11 +4,11 @@ import { navigate } from 'gatsby';
 const Form = () => {
   const [value, setValue] = useState();
 
-  const handleInput = e => {
+  const handleInput = (e) => {
     setValue(e.target.value);
-  }
+  };
 
-  const handleSubmit = e => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
     const query = value
@@ -24,7 +24,12 @@ const Form = () => {
     <form onSubmit={handleSubmit}>
       <label>
         Search by name:
-        <input type="text" name="name" value={value || ''} onChange={handleInput} />
+        <input
+          type="text"
+          name="name"
+          value={value || ''}
+          onChange={handleInput}
+        />
       </label>
       <button type="submit">Search</button>
     </form>

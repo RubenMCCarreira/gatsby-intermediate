@@ -1,6 +1,6 @@
 const withDefaults = require('./utils/default-options');
 
-module.exports = options => {
+module.exports = (options) => {
   const { contentPath, useExternalMDX } = withDefaults(options);
 
   return {

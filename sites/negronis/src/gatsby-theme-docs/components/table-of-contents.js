@@ -22,10 +22,10 @@ const TableOfContents = () => {
     <div>
       <h2>All Recipes</h2>
       <ul>
-        {pages.map(page => (
-          <TableOfContentsPage 
-            id={page.id} 
-            path={page.path} 
+        {pages.map((page) => (
+          <TableOfContentsPage
+            id={page.id}
+            path={page.path}
             title={page.title}
           />
         ))}

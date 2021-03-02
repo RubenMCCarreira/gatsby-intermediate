@@ -10,7 +10,7 @@ const DocsPage = ({ page }) => (
     <MDXRenderer>{page.body}</MDXRenderer>
     <p
       sx={{
-        borderTop: theme => `1px solid ${theme.colors.muted}`,
+        borderTop: (theme) => `1px solid ${theme.colors.muted}`,
         color: 'muted',
         fontSize: 14,
         mt: 2,

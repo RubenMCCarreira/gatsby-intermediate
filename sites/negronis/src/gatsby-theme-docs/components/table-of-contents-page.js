@@ -2,7 +2,7 @@
 import { jsx } from 'theme-ui';
 import { Link } from 'gatsby';
 
-const TableOfContentsPage = ({id, title, path }) => {
+const TableOfContentsPage = ({ id, title, path }) => {
   return (
     <li key={id}>
       <Link
@@ -19,7 +19,7 @@ const TableOfContentsPage = ({id, title, path }) => {
         {title}
       </Link>
     </li>
-  )
-}
+  );
+};
 
-export default TableOfContentsPage
+export default TableOfContentsPage;

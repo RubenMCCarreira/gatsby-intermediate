@@ -6,7 +6,7 @@ import theme from 'prism-react-renderer/themes/nightOwl';
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live';
 import scope from '../scope';
 
-const CodePreview = props => {
+const CodePreview = (props) => {
   const codeProps = preToCodeBlock(props);
 
   if (!codeProps) {
@@ -21,7 +21,7 @@ const CodePreview = props => {
       <LiveError />
       <LivePreview
         sx={{
-          border: theme => `1px solid ${theme.colors.muted}`,
+          border: (theme) => `1px solid ${theme.colors.muted}`,
           p: 4,
           'div :first-child': {
             mt: 0,

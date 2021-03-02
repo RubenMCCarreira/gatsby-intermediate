@@ -93,7 +93,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   const pages = result.data.allDocsPage.nodes;
 
-  pages.forEach(page => {
+  pages.forEach((page) => {
     actions.createPage({
       path: page.path,
       component: require.resolve('./src/templates/docs-page-template.js'),

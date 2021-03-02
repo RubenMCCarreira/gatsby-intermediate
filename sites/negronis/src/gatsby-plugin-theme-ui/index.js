@@ -9,7 +9,7 @@ export default {
   button: {
     hollow: {
       bg: 'background',
-      border: theme => `2px solid ${theme.colors.primary}`,
+      border: (theme) => `2px solid ${theme.colors.primary}`,
       borderRadius: 10,
       color: 'primary',
       display: 'inline-block',
@@ -20,7 +20,7 @@ export default {
       transition: '200ms linear background',
       ':focus': {
         bg: 'highlight',
-        outline: theme => `2px solid ${theme.colors.primary}`,
+        outline: (theme) => `2px solid ${theme.colors.primary}`,
         outlineOffset: 2,
       },
       ':hover': {
@@ -29,7 +29,7 @@ export default {
     },
     primary: {
       bg: 'primary',
-      border: theme => `2px solid ${theme.colors.primary}`,
+      border: (theme) => `2px solid ${theme.colors.primary}`,
       borderRadius: 10,
       color: 'background',
       display: 'inline-block',
@@ -40,7 +40,7 @@ export default {
       transition: '200ms linear background',
       ':focus': {
         bg: 'secondary',
-        outline: theme => `2px solid ${theme.colors.primary}`,
+        outline: (theme) => `2px solid ${theme.colors.primary}`,
         outlineOffset: 2,
       },
       ':hover': {

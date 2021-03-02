@@ -25,7 +25,7 @@ const Layout = ({ children }) => (
           fontWeight: 'bold',
           textDecoration: 'none',
           ':focus': {
-            outline: theme => `2px solid ${theme.colors.background}`,
+            outline: (theme) => `2px solid ${theme.colors.background}`,
             outlineOffset: 4,
           },
         }}

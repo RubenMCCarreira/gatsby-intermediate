@@ -8,12 +8,12 @@ export default {
   },
   fonts: {
     header: 'arial',
-    main: 'fantasy'
+    main: 'fantasy',
   },
   fontStyle: {
-    contentPage: 'italic'
+    contentPage: 'italic',
   },
   textDecoration: {
-    contentPage: 'none'
+    contentPage: 'none',
   },
 };
